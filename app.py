@@ -12,12 +12,15 @@ import streamlit as st
 
 MODEL_PATH = Path(__file__).with_name("detector.tflite")
 APP_TITLE = "Face Detection: A Project by QBjack"
-GITHUB_REPO = "https://github.com/qbjack1/facedetecc"
+GITHUB_REPO_1 = "https://github.com/qbjack1/facedetecc"
+GITHUB_REPO_2 = "https://github.com/qbjack1/Portfolio"
 
 st.set_page_config(page_title=APP_TITLE, layout="wide")
 st.title(APP_TITLE)
 st.subheader("🔗 Please see the documentation located in the GitHub Repository")
-st.markdown(GITHUB_REPO)
+st.markdown(GITHUB_REPO_1)
+st.subheader("🔗 Check out my portfolio!")
+st.markdown(GITHUB_REPO_2)
 
 @st.cache_resource
 def load_mp_detector(model_path: str, min_confidence: float):
